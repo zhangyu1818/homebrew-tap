@@ -11,7 +11,7 @@ class Qwen3Compatibility < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-darwin-amd64.tar.gz"
-      sha256 "1d7822d3ea25548386d6c325441278f7e61c026d264e740a52a0a20896930d10"
+      sha256 "89fe5cf59e684a55dc4e5ae8939318f47536902ac06c7e1f4471496915ab23d0"
 
       def install
         bin.install "qwen3-compatibility"
@@ -19,7 +19,7 @@ class Qwen3Compatibility < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-darwin-arm64.tar.gz"
-      sha256 "f5a5efa9b7db78444ac7230a54667941d391f0a29d66307d93c7120c26e0e163"
+      sha256 "069a073e16b195edeea74169a11f229b2fcab06a3d6e7a8ca95a65d61760ccf7"
 
       def install
         bin.install "qwen3-compatibility"
@@ -30,14 +30,14 @@ class Qwen3Compatibility < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-linux-amd64.tar.gz"
-      sha256 "c72317b737792b0f6fa6beab85d6b0b42704f6798cdaafeefbb8859a37257fe6"
+      sha256 "8f6b181cadf3b7b3d4751cccdbf9ebe8ba621f1b073efcb03f2fd8a133a2cbe6"
       def install
         bin.install "qwen3-compatibility"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-linux-arm64.tar.gz"
-      sha256 "7dca5d6f99ea436efb1f32a9a20c3e15af6c79a5a56805ca33979ff49a495795"
+      sha256 "90dd764bce2d95b641347ced42f8951e392579067db28858d3ea58550f0eba16"
       def install
         bin.install "qwen3-compatibility"
       end
@@ -46,9 +46,9 @@ class Qwen3Compatibility < Formula
 
   service do
     run [opt_bin/"qwen3-compatibility", "server"]
-    keep_alive: true
-    run_type: interval
-    interval: 10
+    keep_alive true
+    run_type :interval
+    interval 10
     log_path var/"log/qwen3-compatibility.log"
     error_log_path var/"log/qwen3-compatibility.error.log"
   end

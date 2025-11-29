@@ -5,21 +5,21 @@
 class Qwen3Compatibility < Formula
   desc "OpenAI-compatible API server for Qwen3 ASR services"
   homepage "https://github.com/zhangyu1818/qwen3-compatibility"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-darwin-amd64.tar.gz"
-      sha256 "2681c00090f44d60b3559032527ef52d85090b60404800e74c2911aa29951356"
+      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.2/qwen3-compatibility-darwin-amd64.tar.gz"
+      sha256 "fc009a362943bc67bc950a8d2278c9b2d6877401ba3594fbd1012a0b781065c1"
 
       def install
         bin.install "qwen3-compatibility"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-darwin-arm64.tar.gz"
-      sha256 "737e77da848705af401f7f79a8d822dfa05b32813abb8879f763aee365317c90"
+      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.2/qwen3-compatibility-darwin-arm64.tar.gz"
+      sha256 "2ea88eb402f192430b97ceb3d49c6ccd0f08bdb0bdb393a028e37e4a4c1709e3"
 
       def install
         bin.install "qwen3-compatibility"
@@ -29,15 +29,15 @@ class Qwen3Compatibility < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-linux-amd64.tar.gz"
-      sha256 "fc979475d713eef1f84b209972b5e737fceac9f8749edb1958b4d613c666ba3f"
+      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.2/qwen3-compatibility-linux-amd64.tar.gz"
+      sha256 "184d120e09040cce9167e2c1703f2da6a158cfd354e2aa2e5c71550939570341"
       def install
         bin.install "qwen3-compatibility"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-linux-arm64.tar.gz"
-      sha256 "0b48b49fe4a03ef59d95ce069aa83cc9553ef155060b3fc2e59c1c9b0c5ada9b"
+      url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.2/qwen3-compatibility-linux-arm64.tar.gz"
+      sha256 "4573ff2cf620159aa4730a583377d73a06d33143343c96bff5880f4260862ce6"
       def install
         bin.install "qwen3-compatibility"
       end

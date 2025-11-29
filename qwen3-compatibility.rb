@@ -11,7 +11,7 @@ class Qwen3Compatibility < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-darwin-amd64.tar.gz"
-      sha256 "89fe5cf59e684a55dc4e5ae8939318f47536902ac06c7e1f4471496915ab23d0"
+      sha256 "2681c00090f44d60b3559032527ef52d85090b60404800e74c2911aa29951356"
 
       def install
         bin.install "qwen3-compatibility"
@@ -19,7 +19,7 @@ class Qwen3Compatibility < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-darwin-arm64.tar.gz"
-      sha256 "069a073e16b195edeea74169a11f229b2fcab06a3d6e7a8ca95a65d61760ccf7"
+      sha256 "737e77da848705af401f7f79a8d822dfa05b32813abb8879f763aee365317c90"
 
       def install
         bin.install "qwen3-compatibility"
@@ -30,14 +30,14 @@ class Qwen3Compatibility < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-linux-amd64.tar.gz"
-      sha256 "8f6b181cadf3b7b3d4751cccdbf9ebe8ba621f1b073efcb03f2fd8a133a2cbe6"
+      sha256 "fc979475d713eef1f84b209972b5e737fceac9f8749edb1958b4d613c666ba3f"
       def install
         bin.install "qwen3-compatibility"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/zhangyu1818/qwen3-compatibility/releases/download/v0.0.1/qwen3-compatibility-linux-arm64.tar.gz"
-      sha256 "90dd764bce2d95b641347ced42f8951e392579067db28858d3ea58550f0eba16"
+      sha256 "0b48b49fe4a03ef59d95ce069aa83cc9553ef155060b3fc2e59c1c9b0c5ada9b"
       def install
         bin.install "qwen3-compatibility"
       end
